@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   css: ['~/assets/css/main.css'],
+  ssr: true,
   modules: [
     '@nuxtjs/sitemap',
     '@nuxt/ui',
@@ -44,12 +45,6 @@ export default defineNuxtConfig({
         owner: 'lukearch',
         url: 'https://github.com/lukearch/lithiajs.com',
       },
-    },
-  },
-  runtimeConfig: {
-    public: {
-      ghToken: process.env.GH_TOKEN,
-      ghRepo: process.env.GH_REPO,
     },
   },
 });
