@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    '@nuxthq/studio',
   ],
   fonts: {
     defaults: {
