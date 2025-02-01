@@ -13,6 +13,9 @@ export default <Partial<Config>>{
           xl: '1280px',
         },
       },
+      height: {
+        screen: 'calc(100vh - 156px)',
+      },
       colors: {
         bunker: {
           50: '#f1f5fe',

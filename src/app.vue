@@ -21,11 +21,11 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: '/images/og-image.png',
+  ogImage: '/images/og.png',
   ogUrl: 'https://lithiajs.com',
   twitterTitle: title,
   twitterDescription: description,
-  twitterImage: '/images/og-image.png',
+  twitterImage: '/images/og.png',
   twitterCard: 'summary_large_image',
 });
 
