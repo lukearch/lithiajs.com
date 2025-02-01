@@ -17,6 +17,7 @@
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui": "^2.21.0",
     "@nuxtjs/sitemap": "^7.2.4",
+    "@octokit/rest": "^21.1.0",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "@vueuse/nuxt": "^12.5.0",
@@ -25,5 +26,9 @@
     "nuxt-og-image": "^4.1.2",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.25",
+    "@iconify-json/octicon": "^1.2.2"
   }
 }

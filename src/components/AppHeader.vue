@@ -4,16 +4,34 @@
       scroll: y > 0,
     }">
     <div class="container">
-      <NuxtLink href="/" class="flex max-h-[44px] w-fit">
+      <NuxtLink href="/">
         <NuxtImg src="lithia.svg" :width="34.63" :height="44" alt="Lithia.js" />
       </NuxtLink>
-      <AnimatedButton text="Become a Sponsor" />
+      <div class="flex items-center gap-4">
+        <NuxtLink
+          v-if="repo.data.value"
+          :href="repo.data.value.html_url"
+          target="_blank"
+          class="flex items-center gap-0.5 rounded-button p-button px-3 hover:bg-white/10">
+          <Icon name="octicon:mark-github-24" size="18" class="mr-2" />
+          <span class="text-sm">
+            {{ minifyNumber(repo.data.value.stargazers_count) }}
+          </span>
+        </NuxtLink>
+        <NuxtLink href="https://opencollective.com/lithiajs" target="_blank">
+          <AnimatedButton text="Become a Sponsor" />
+        </NuxtLink>
+      </div>
     </div>
   </header>
 </template>
 
 <script lang="ts" setup>
+import { Icon } from '#components';
+
 const { y } = useWindowScroll();
+const { getRepo } = useGithub();
+const repo = await useAsyncData('repo', () => getRepo());
 </script>
 
 <style scoped>

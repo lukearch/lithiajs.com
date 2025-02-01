@@ -46,4 +46,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    public: {
+      ghToken: process.env.NUXT_PUBLIC_GH_TOKEN,
+      ghRepo: process.env.NUXT_PUBLIC_GH_REPO,
+    },
+  },
 });
