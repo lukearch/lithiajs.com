@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@vueuse/nuxt',
     'nuxt-og-image',
+    '@nuxthq/studio',
   ],
   fonts: {
     defaults: {
@@ -35,5 +36,15 @@ export default defineNuxtConfig({
   },
   icon: {
     provider: 'iconify',
+  },
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'lithiajs.com',
+        owner: 'lukearch',
+        url: 'https://github.com/lukearch/lithiajs.com',
+      },
+    },
   },
 });
