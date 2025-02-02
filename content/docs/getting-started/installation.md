@@ -149,6 +149,6 @@ export default async function handle(req: LithiaRequest, res: LithiaResponse) {
 
 ## Run the development server
 
-- Run `npm run dev` to start the development server.
-- Make a request with any HTTP method to `http://localhost:3000`.
-- Edit the `routes/index.ts` file and see the changes in real-time.
+1. Run `npm run dev` to start the development server.
+2. Make a request with any HTTP method to `http://localhost:3000`.
+3. Edit the `routes/index.ts` file and see the changes in real-time.

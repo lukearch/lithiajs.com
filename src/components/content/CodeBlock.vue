@@ -11,7 +11,7 @@
         <Icon class="text-white" name="feather:copy" size="16" />
       </button>
     </div>
-    <div ref="codeBlock" class="p-4 bg-white/5">
+    <div ref="codeBlock" class="p-4 bg-white/5 overflow-x-auto">
       <slot name="code" />
     </div>
   </div>
