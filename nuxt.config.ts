@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://lithiajs.com',
-    name: 'Lithia.js - The Next-Generation Framework for server-side applications',
+    name: 'Lithia.js: The Next-Generation Framework for Node.js and TS',
   },
   icon: {
     provider: 'iconify',

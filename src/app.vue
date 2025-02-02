@@ -12,10 +12,9 @@
 import { Analytics } from '@vercel/analytics/nuxt';
 import { SpeedInsights } from '@vercel/speed-insights/nuxt';
 
-const title =
-  'Lithia.js - The Next-Generation Framework for server-side applications';
+const title = 'Lithia.js: The Next-Generation Framework for Node.js and TS';
 const description =
-  'Lithia.js is a modern, fast, and powerful framework for building server-side applications with Node.js. It is built on top of Vite and Vue 3, and it is designed to be simple and flexible.';
+  'Lithia is an open-source framework that enables you to create elastic, modern, and powerful server-side applications with Node.js and TypeScript.';
 
 useSeoMeta({
   title,
