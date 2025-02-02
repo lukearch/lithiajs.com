@@ -1,5 +1,6 @@
 <template>
-  <ul class="list-disc list-inside text-gray-200 leading-8">
+  <ul
+    class="list-none list-inside child:text-gray-200 leading-8 child:before:content-['-'] child:before:mr-4 child:before:text-gray-400 child:after:content-['.']">
     <slot />
   </ul>
 </template>

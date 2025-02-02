@@ -277,6 +277,8 @@ node .lithia/server.js
 
 ### Framework Tuning
 
+Learn more about advanced settings at [`lithia.config.js`](/docs/api-reference/configuration/lithia-config-file):
+
 ::code-block{icon="logos:javascript"}
 #context
 lithia.config.js

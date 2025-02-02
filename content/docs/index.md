@@ -22,6 +22,8 @@ Lithia.js is a next-generation framework for building high-performance server-si
 
 Built entirely on Node.js core modules with zero external dependencies, Lithia.js leverages the native `http` module for unparalleled performance. Our integrated toolchain eliminates configuration overhead through:
 
+:br
+
 - Intelligent code bundling and compilation
 - Automated production optimizations
 - Built-in API documentation generation
@@ -40,35 +42,21 @@ Traditional Node.js frameworks require extensive setup before writing business l
 
 :br
 
-**Competitor Workflow**  
-❌ Install multiple dependencies  
-❌ Configure bundlers/transpilers  
-❌ Manual API documentation setup  
-❌ Complex routing configurations  
-❌ Hours spent on project setup
+### Lithia.js Workflow
+
+- We simplify **routing** so you don't need to **manage it**
+- We optimize **bundling** so you don't need to **configure it**
+- We automate **API documentation** so you don't need to **write it**
+- We streamline **TypeScript support** so you don't need to **set it up**
+- We provide **Dev Mode** for instant feedback without manual reloads
+- We offer **production-ready** builds that are 72x faster than traditional frameworks
+- We ensure **zero dependencies** for a lightweight and secure application stack
+- We deliver **performance-first** architecture with built-in caching strategies
 
 :br
 
-**Lithia.js Workflow**  
-✅ Single-command project scaffolding  
-✅ TypeScript support out of the box  
-✅ Automatic OpenAPI documentation  
-✅ File-system based routing  
-✅ Production-ready 20x faster
-
-:br
-
-Focus on innovation while we handle the rest:
-
-- **Smart Routing System**: Intuitive file-based routing with dynamic parameter support
-- **Integrated Bundler**: Optimized production builds with tree-shaking and minification
-- **API Documentation**: Automatically generated OpenAPI documentation for your endpoints
-- **Dev Mode**: Instantly preview changes with hot module replacement
-- **TypeScript First**: Native ESM support with zero-config TS compilation
-
-:br
-
-In an era of complex toolchains, the real question becomes: **Why complicate when you can simplify?**
+We don't just simplify your development process - **we accelerate it**.
+In an era of complex toolchains, the real question becomes: **Why not choose Lithia.js**?
 
 ::divider
 ::
@@ -77,33 +65,49 @@ In an era of complex toolchains, the real question becomes: **Why complicate whe
 
 Explore Lithia.js feature set designed for modern application development:
 
-:br
+::card-collection
 
-| Feature         | Next-Gen Advantage                                                           |
-| --------------- | ---------------------------------------------------------------------------- |
-| `Routing`       | File-system based routing with dynamic parameters and middleware support     |
-| `Dev Mode`      | Instantly preview changes with hot module replacement                        |
-| `Bundling`      | Multi-environment optimization with automatic code splitting                 |
-| `Optimizations` | Performance-first architecture with built-in caching strategies              |
-| `TypeScript`    | First-class TypeScript support with strict type checking across entire stack |
+::feature-card
+#title
+Smart Routing System
 
-::divider
+#content
+Intuitive file-based routing with dynamic parameter support
 ::
 
-## Navigating this documentation
+::feature-card
+#title
+Integrated Bundler
 
-Our structured documentation follows progressive learning paths:
+#content
+Optimized production builds with tree-shaking and minification
+::
 
-:br
+::feature-card
+#title
+API Documentation
 
-- **Left Navigation Panel** :br
-  Access sequential guides from fundamental concepts to advanced topics
-- **Mobile Optimization** :br
-  Tap the `menu` section at the bottom of the header to access all documentation sections
-- **Flexible Learning** :br
-  Follow linear progression or jump directly to relevant use cases - all content remains interconnected
+#content
+Automatically generated OpenAPI documentation for your endpoints
+::
 
-:br
+::feature-card
+#title
+Dev Mode
+
+#content
+Instantly preview changes with hot module replacement
+::
+
+::feature-card
+#title
+TypeScript First
+
+#content
+Native ESM support with zero-config TS compilation
+::
+
+::
 
 ::divider
 ::
