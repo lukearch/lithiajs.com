@@ -28,6 +28,14 @@ export default defineNuxtConfig({
         name: 'Inter',
         provider: 'google',
       },
+      {
+        name: 'Geist',
+        provider: 'google',
+      },
+      {
+        name: 'Geist Mono',
+        provider: 'google',
+      },
     ],
   },
   site: {

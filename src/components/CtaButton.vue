@@ -1,14 +1,19 @@
 <template>
   <button>
-    <span>
-      {{ props.text }}
+    <span
+      :style="{
+        fontFamily: props.fontFamily,
+        textTransform: props.uppercase ? 'uppercase' : 'none',
+      }">
+      <slot />
     </span>
   </button>
 </template>
 
 <script lang="ts" setup>
 const props = defineProps<{
-  text: string;
+  fontFamily?: string;
+  uppercase?: boolean;
 }>();
 </script>
 
@@ -69,10 +74,7 @@ button span {
   z-index: 1;
   display: flex;
   color: theme('colors.bunker.950');
-  letter-spacing: theme('letterSpacing.button');
   font-weight: theme('fontWeight.button');
   font-size: theme('fontSize.button');
-  text-transform: uppercase;
-  font-family: Inter, sans-serif;
 }
 </style>

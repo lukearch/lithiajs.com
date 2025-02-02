@@ -20,7 +20,7 @@
           </span>
         </NuxtLink>
         <NuxtLink href="https://opencollective.com/lithiajs" target="_blank">
-          <AnimatedButton text="Become a Sponsor" />
+          <AnimatedButton always-animate> Become a Sponsor </AnimatedButton>
         </NuxtLink>
       </div>
     </div>

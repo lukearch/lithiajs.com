@@ -1,15 +1,20 @@
 <template>
   <button :class="{ 'always-animated': props.alwaysAnimate }">
-    <span>
-      {{ props.text }}
+    <span
+      :style="{
+        fontFamily: props.fontFamily,
+        textTransform: props.uppercase ? 'uppercase' : 'none',
+      }">
+      <slot />
     </span>
   </button>
 </template>
 
 <script lang="ts" setup>
 const props = defineProps<{
-  text: string;
   alwaysAnimate?: boolean;
+  fontFamily?: string;
+  uppercase?: boolean;
 }>();
 </script>
 
@@ -84,11 +89,8 @@ button span {
   z-index: 2;
   display: flex;
   color: white;
-  letter-spacing: theme('letterSpacing.button');
   font-weight: theme('fontWeight.button');
   font-size: theme('fontSize.button');
-  text-transform: uppercase;
-  font-family: Inter, sans-serif;
 }
 
 @media screen and (max-width: 768px) {

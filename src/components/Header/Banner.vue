@@ -1,8 +1,8 @@
 <template>
   <div v-if="!isClose" class="w-full bg-spring-green-400 py-2">
     <div class="container relative flex items-center justify-center">
-      <div class="flex gap-2 items-center">
-        <p class="text-bunker-950 font-bold text-sm">
+      <div class="flex gap-2 items-center flex-col sm:flex-row">
+        <p class="text-bunker-950 font-semibold text-sm text-center">
           Support Lithia.js by becoming a sponsor at
         </p>
         <NuxtLink
@@ -11,7 +11,7 @@
           class="flex items-center gap-1.5">
           <button
             class="flex items-center justify-center gap-1.5 bg-bunker-950 py-1 px-3 rounded-full text-spring-green-400 text-sm">
-            <span class="font-bold">opencollective</span>
+            <span class="font-semibold">opencollective</span>
             <Icon name="simple-icons:opencollective" size="16" />
           </button>
         </NuxtLink>
