@@ -44,12 +44,12 @@ export default defineNuxtConfig({
   icon: {
     provider: 'iconify',
   },
-  studio: {
-    enabled: true,
-    gitInfo: {
-      name: 'lithiajs',
-      owner: 'lukearch',
-      url: 'https://github.com/lukearch/lithiajs',
-    },
-  },
+  // studio: {
+  //   enabled: true,
+  //   gitInfo: {
+  //     name: 'lithiajs',
+  //     owner: 'lukearch',
+  //     url: 'https://github.com/lukearch/lithiajs',
+  //   },
+  // },
 });
