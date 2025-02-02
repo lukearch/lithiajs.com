@@ -52,11 +52,17 @@ export default defineNuxtConfig({
     },
     preview: {
       api: 'https://api.nuxt.studio',
+      dev: true,
       gitInfo: {
-        name: 'lithiajs',
+        name: 'lithiajs.com',
         owner: 'lukearch',
-        url: 'https://github.com/lukearch/lithiajs',
+        url: 'https://github.com/lukearch/lithiajs.com',
       },
+    },
+  },
+  vite: {
+    server: {
+      allowedHosts: true,
     },
   },
 });
