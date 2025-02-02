@@ -5,3 +5,5 @@ previous:
   title: Introduction
   path: /docs/getting-started/introduction
 ---
+
+# Installation
