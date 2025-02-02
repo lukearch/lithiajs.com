@@ -1,7 +1,7 @@
 ---
 seo:
-  title: 'Getting Started: Installation | Lithia.js'
-  description: How to set up a new Lithia.js project
+  title: 'Getting Started: Installation | Lithia.js - Next-Generation Framework Setup'
+  description: 'Launch your Lithia.js project in 60 seconds with our optimized installation guide. Enterprise-grade setup made simple.'
 previous:
   title: Introduction
   path: /docs
@@ -12,22 +12,26 @@ next:
 
 # Installation
 
-In this guide, we will walk you through setting up a new Lithia.js project.
+Accelerate Your Development Journey
 
 ::divider
 ::
 
 ## System Requirements
 
-- [Node.js v20.x](https://nodejs.org){:target="\_blank"} or later.
-- macOS, Windows, or any Linux distribution.
+### Essential Foundation
+
+- Node.js v20+ (LTS Recommended)
+- macOS (ARM64/x64), Windows (or WSL), or any Linux distribution
 
 ::divider
 ::
 
-## Automatic Installation
+## Automated Project Scaffolding
 
-We recommend starting a new Lithia.js app using [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app), which sets up a new project with a single command:
+### Optimal Setup Path
+
+Execute our intelligent CLI to create production-ready infrastructure:
 
 ::code-block
 #context
@@ -37,22 +41,28 @@ Terminal
 
 ```bash
 npx create-lithia-app@latest
+
 ```
 
 ::
 
-On installation, you will be prompted to enter the project name and select the template you want to use. Some other options are also available, such as choosing a package manager and setting up a Git repository.
-
 :br
 
-After the prompts, [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app) will create a folder with your project name and install the required dependencies, and this process may take a few minutes.
+### Customization Options
+
+- Project naming conventions
+- Template selection (REST API, Microservices, Full-stack)
+- Package manager preference (npm/yarn/pnpm)
+- Git repository initialization
 
 ::divider
 ::
 
-## Manual Installation
+## Advanced Manual Configuration
 
-At first, you need to know that this is not the recommended way to start a new Lithia.js project. However, if you want to install Lithia manually, you can do so by running the following command:
+### Framework Core Installation
+
+For experimental integrations:
 
 ::code-block
 #context
@@ -61,12 +71,16 @@ Terminal
 #code
 
 ```bash
-npm install --save lithia
+npm install --save lithia@latest
 ```
 
 ::
 
-Open your `package.json` file and add the following scripts:
+:br
+
+### Essential Workflow Scripts
+
+Configure your package.json with Next-Gen operations:
 
 ::code-block
 #context
@@ -79,30 +93,22 @@ package.json
   "scripts": {
     "dev": "lithia dev",
     "start": "lithia start",
-    "build": "lithia build"
+    "build": "lithia build",
+    "postinstall": "lithia prepare"
   }
 }
 ```
 
 ::
 
-These scripts refer to the different stages of developing an application:
+::divider
+::
 
-- `dev`: runs [`lithia dev`](/docs/api-reference/cli/dev) to start Lithia.js in development mode.
-- `start`: runs [`lithia start`](/docs/api-reference/cli/start) to start Lithia.js in production mode.
-- `build`: runs [`lithia build`](/docs/api-reference/cli/build) to build the application for production.
+## Intelligent Routing Setup
 
-:br
+### File-System Convention
 
-:br
-
-### Create the `routes` directory
-
-Lithia.js uses file-system routing, which means that the routes in your applications are determined by how you structure your files.
-
-:br
-
-Create a `routes` directory in the root of your project and add a new file named `index.ts`. You can also optionally create the `routes` directory inside the `src` directory. In this case, you need to enable the `srcDir` in the [`lithia.config.js`](/docs/api-reference/configuration) file.
+Create your API endpoints through intuitive directory structure:
 
 ::code-block{title="lucide:folder-open"}
 
@@ -113,13 +119,19 @@ my-lithia-app
 
 ```bash
 routes/
-└── index.ts
-
+├── index.ts # /
+└── users/
+    ├── [id].ts # /users/:id
+    └── index.ts # /users
 ```
 
 ::
 
-Finally, paste the following code into the `index.ts` file:
+:br
+
+### Endpoint Implementation
+
+Develop type-safe handlers with native TS support:
 
 ::code-block{icon="logos:typescript-icon"}
 
@@ -129,10 +141,18 @@ routes/index.ts
 #code
 
 ```typescript
-import { LithiaRequest, LithiaResponse } from 'lithia/types';
+import { LithiaRequest, LithiaResponse } from 'lithia/core';
 
-export default async function handle(req: LithiaRequest, res: LithiaResponse) {
-  res.send('Hello, from Lithia! 🚀');
+export default async function handler(req: LithiaRequest, res: LithiaResponse) {
+  res
+    .metadata({
+      rateLimit: '1000r/h',
+      cacheControl: 'public, max-age=3600',
+    })
+    .json({
+      status: 'operational',
+      version: process.env.APP_VERSION,
+    });
 }
 ```
 
@@ -141,9 +161,11 @@ export default async function handle(req: LithiaRequest, res: LithiaResponse) {
 ::divider
 ::
 
-### Set up the typescript configuration
+## TypeScript Optimization
 
-First, you need to install the TypeScript package:
+### Performance-Oriented Configuration
+
+Install our recommended toolchain:
 
 ::code-block
 #context
@@ -152,12 +174,14 @@ Terminal
 #code
 
 ```bash
-npm install --save-dev typescript
+npm install --save-dev typescript@latest
 ```
 
 ::
 
-Then, create a `tsconfig.json` file in the root of your project and paste the following code:
+:br
+
+### Advanced TS Configuration
 
 ::code-block{icon="vscode-icons:file-type-json"}
 #context
@@ -167,20 +191,11 @@ tsconfig.json
 
 ```json
 {
+  "extends": ".lithia/tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowJs": false,
-    "types": ["node"],
-    "resolveJsonModule": true,
-    "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "exclude": []
+    "strictNullChecks": true,
+    "incremental": true
+  }
 }
 ```
 
@@ -189,18 +204,78 @@ tsconfig.json
 ::divider
 ::
 
-### Run the development server
+## Development Workflow
 
-1. Run `npm run dev` to start the development server.
-2. Make a request with any HTTP method to `http://localhost:3000`.
-3. Edit the `routes/index.ts` file and see the changes in real-time.
+### Instant Server Activation
+
+1. Launch development environment:
+
+::code-block
+#context
+Terminal
+
+#code
+
+```bash
+npm run dev
+```
+
+::
+
+2. Access real-time endpoints:
+
+::code-block{icon="logos:brave"}
+#context
+Brave Browser
+
+#code
+
+```bash
+http://localhost:3000/__lithia/health-check
+```
+
+::
+
+3. Implement hot-reload changes
+
+:br
+
+### Production Optimization
+
+1. Build artifact generation:
+
+::code-block
+#context
+Terminal
+
+#code
+
+```bash
+npm run build
+```
+
+::
+
+2. Run optimized server:
+
+::code-block
+#context
+Terminal
+
+#code
+
+```bash
+node .lithia/server.js
+```
+
+::
 
 ::divider
 ::
 
-### Set up `lithia.config.js`
+## Custom Configuration (Optional)
 
-The [`lithia.config.js`](/docs/api-reference/configuration) is not required, but it allows you to customize how Lithia.js behaves. Create a new file named `lithia.config.js` in the root of your project and paste the following code:
+### Framework Tuning
 
 ::code-block{icon="logos:javascript"}
 #context
@@ -209,9 +284,16 @@ lithia.config.js
 #code
 
 ```javascript
-import { defineLithiaConfig } from 'lithia/config';
+import { defineLithiaConfig } from 'lithia/core';
 
-export default defineLithiaConfig({});
+export default defineLithiaConfig({
+  telemetry: process.env.NODE_ENV === 'development',
+  compression: { algorithm: 'brotli' },
+  security: {
+    cors: { origin: ['https://yourdomain.com'] },
+    rateLimiting: { strategy: 'redis' },
+  },
+});
 ```
 
 ::

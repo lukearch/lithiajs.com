@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Introduction | Lithia.js
-  description: Welcome to Lithia.js documentation!
+  title: Introduction | Lithia.js - Next-Generation Node.js Framework
+  description: Discover Lithia.js - A modern Node.js framework engineered for performance and developer efficiency. Start building production-ready applications in minutes.
 next:
   title: Installation
   path: /docs/getting-started/installation
@@ -9,84 +9,115 @@ next:
 
 # Introduction
 
-Welcome to Lithia.js documentation!
+Welcome to the Future of Node.js Development
 
 ::divider
 ::
 
 ## What is Lithia.js?
 
-Lithia.js is a Node.js framework for building server-side applications. It is designed to be simple, fast, and easy to use.
+Lithia.js is a next-generation framework for building high-performance server-side applications with Node.js. Engineered for modern development workflows, it combines minimalism with powerful capabilities out of the box.
 
 :br
 
-Under the hood, Lithia.js does not use any external dependencies and is built on top of the built-in Node.js `http` module.
-It also provides a set of toolings, like bundling, compiling, and mode. This allows you to focus on building your application
-instead of spending time configuring your project.
+Built entirely on Node.js core modules with zero external dependencies, Lithia.js leverages the native `http` module for unparalleled performance. Our integrated toolchain eliminates configuration overhead through:
+
+- Intelligent code bundling and compilation
+- Automated production optimizations
+- Built-in API documentation generation
+- TypeScript-native development environment
 
 :br
 
-Even if you're an individual developer or a team, Lithia.js can help you build your application faster and more efficiently.
-
-::br
-
-Trust us, you'll love it!
+Whether you're prototyping a startup idea or architecting enterprise solutions, Lithia.js streamlines your workflow from first commit to production deployment.
 
 ::divider
 ::
 
-## Why Lithia.js?
+## Why Choose Lithia.js?
 
-Lithia.js was created to make the development process easier and faster, without all the boilerplate code and configurations that you usually need to set up when building a Node.js application.
-
-:br
-
-When you choose any other framework, you need to install a lot of dependencies, configure your project, and set up a lot of things before you can start building your application. With Lithia.js, you can start building your application right away, without worrying about all these things.
+Traditional Node.js frameworks require extensive setup before writing business logic. Lithia.js redefines this paradigm through our zero-configuration philosophy:
 
 :br
 
-It's literally as simple as running `create-lithia-app --yes` and then `npm run dev` without any additional configurations.
-All ready, all set!
+**Competitor Workflow**  
+❌ Install multiple dependencies  
+❌ Configure bundlers/transpilers  
+❌ Manual API documentation setup  
+❌ Complex routing configurations  
+❌ Hours spent on project setup
 
 :br
 
-Lithia.js takes care of all the heavy lifting for you, so you can focus on what really matters.
+**Lithia.js Workflow**  
+✅ Single-command project scaffolding  
+✅ TypeScript support out of the box  
+✅ Automatic OpenAPI documentation  
+✅ File-system based routing  
+✅ Production-ready 20x faster
 
 :br
 
-- We simplify **routing** so you don't have to **manage it**.
-- We provide a **built-in bundler** so you don't have to **configure it**.
-- We provide a **built-in OpenAPI module** so you don't have to **doc by yourself**.
-- We already **documented everything** so you don't have to **figure it out**.
-- We already **configure your project** so you don't have to **waste your time** doing it.
+Focus on innovation while we handle the rest:
+
+- **Smart Routing System**: Intuitive file-based routing with dynamic parameter support
+- **Integrated Bundler**: Optimized production builds with tree-shaking and minification
+- **API Documentation**: Automatically generated OpenAPI documentation for your endpoints
+- **Dev Mode**: Instantly preview changes with hot module replacement
+- **TypeScript First**: Native ESM support with zero-config TS compilation
 
 :br
 
-We almost do everything for you, so the correct question should be: **Why not Lithia.js?**
+In an era of complex toolchains, the real question becomes: **Why complicate when you can simplify?**
 
 ::divider
 ::
 
-## Main features
+## Core Capabilities
 
-Some of the main features of Lithia.js are:
+Explore Lithia.js feature set designed for modern application development:
 
-| Feature                                              | Description                                                                                       |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| [Routing](/docs/getting-started/routing)             | Lithia.js provides a file-system based routing that supports static and dynamic routes            |
-| [DevMode](/docs/getting-started/dev-mode)            | A powerful dev-server that allows you to watch your changes without restarting the entire process |
-| [Bundling](/docs/getting-started/bundling)           | A built-in bundler that allows you to bundle your application for production                      |
-| [Optimizations](/docs/getting-started/optimizations) | Lithia.js provides a set of optimizations to make your application faster and more efficient.     |
-| [TypeScript](/docs/getting-started/typescript)       | Lithia.js supports TypeScript out of the box.                                                     |
+:br
+
+| Feature         | Next-Gen Advantage                                                           |
+| --------------- | ---------------------------------------------------------------------------- |
+| `Routing`       | File-system based routing with dynamic parameters and middleware support     |
+| `Dev Mode`      | Instantly preview changes with hot module replacement                        |
+| `Bundling`      | Multi-environment optimization with automatic code splitting                 |
+| `Optimizations` | Performance-first architecture with built-in caching strategies              |
+| `TypeScript`    | First-class TypeScript support with strict type checking across entire stack |
 
 ::divider
 ::
 
-## How to use this documentation
+## Navigating this documentation
 
-On the left side of the screen, you'll find the docs navbar. The pages of the docs are organized sequentially, from basic to advanced, so you can follow step-by-step when building your application. However, you can read them in any order or skip to the pages that apply to your use case.
+Our structured documentation follows progressive learning paths:
 
 :br
 
-If you're reading this documentation from a mobile device, you can access the docs navbar by clicking on the `menu` section at the bottom of the
-header.
+- **Left Navigation Panel** :br
+  Access sequential guides from fundamental concepts to advanced topics
+- **Mobile Optimization** :br
+  Tap the `menu` section at the bottom of the header to access all documentation sections
+- **Flexible Learning** :br
+  Follow linear progression or jump directly to relevant use cases - all content remains interconnected
+
+:br
+
+::divider
+::
+
+Ready to experience the future of Node.js development? Let's get started with the installation process.
+
+::code-block
+#context
+Terminal
+
+#code
+
+```bash
+npx create-lithia-app@latest
+```
+
+::
