@@ -1,9 +1,6 @@
 <template>
   <HeaderBanner />
-  <header
-    :class="{
-      scroll: y > 0,
-    }">
+  <header class="backdrop-blur-sm bg-black/50">
     <div class="container">
       <NuxtLink href="/">
         <NuxtImg src="lithia.svg" :width="34.63" :height="44" alt="Lithia.js" />
@@ -51,13 +48,8 @@ header {
   padding: 1rem 0;
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease-out;
-}
-
-.scroll {
-  backdrop-filter: blur(5px);
   border-color: rgba(255, 255, 255, 0.1);
 }
-
 .container {
   display: flex;
   justify-content: space-between;

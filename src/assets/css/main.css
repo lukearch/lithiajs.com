@@ -11,3 +11,20 @@ body {
   color: white;
   font-family: Geist, sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  @apply bg-gradient-to-b from-transparent via-spring-green-400 to-transparent;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  @apply bg-gradient-to-r from-transparent via-spring-green-400 to-transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: theme('colors.bunker.950');
+}

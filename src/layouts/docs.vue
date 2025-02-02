@@ -1,7 +1,8 @@
 <template>
   <main>
     <div
-      class="container lg:hidden border-b border-solid border-white/10 p-4"
+      id="mobile-docs-navigation"
+      class="container lg:hidden border-b border-solid border-white/10 p-4 sticky top-[77px] z-20 backdrop-blur-sm bg-black/50"
       @click="isOpen = !isOpen">
       <span class="flex items-center font-bold">
         <UIcon
@@ -28,7 +29,9 @@
       </USlideover>
     </div>
     <div class="container md:flex md:flex-row relative gap-12">
-      <DocsNavigation class="hidden lg:flex sticky top-[77px]" :menu="menu" />
+      <DocsNavigation
+        class="hidden lg:flex sticky top-[77px] w-1/5"
+        :menu="menu" />
       <div class="w-full min-w-0 max-w-full">
         <slot />
       </div>
