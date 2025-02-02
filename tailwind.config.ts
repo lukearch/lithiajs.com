@@ -61,4 +61,13 @@ export default <Partial<Config>>{
       },
     },
   },
+  plugins: [
+    {
+      handler: function ({ addVariant }) {
+        addVariant('child', '& > *');
+        addVariant('child:svg', '& > svg');
+        addVariant('child:svg:hover', '& > svg:hover');
+      },
+    },
+  ],
 };

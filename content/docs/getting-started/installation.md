@@ -36,9 +36,11 @@ We recommend starting a new Lithia.js app using [`create-lithia-app`](/docs/api-
 Terminal
 
 #code
+
 ```bash
 npx create-lithia-app@latest
 ```
+
 ::
 
 On installation, you will be prompted to enter the project name and select the template you want to use. Some other options are also available, such as choosing a package manager and setting up a Git repository.
@@ -59,9 +61,11 @@ At first, you need to know that this is not the recommended way to start a new L
 Terminal
 
 #code
+
 ```bash
 npm install --save lithia
 ```
+
 ::
 
 Open your `package.json` file and add the following scripts:
@@ -71,7 +75,8 @@ Open your `package.json` file and add the following scripts:
 package.json
 
 #code
-```json [package.json]
+
+```json
 {
   "scripts": {
     "dev": "lithia dev",
@@ -80,6 +85,7 @@ package.json
   }
 }
 ```
+
 ::
 
 These scripts refer to the different stages of developing an application:
@@ -100,45 +106,114 @@ Lithia.js uses file-system routing, which means that the routes in your applicat
 
 Create a `routes` directory in the root of your project and add a new file named `index.ts`. You can also optionally create the `routes` directory inside the `src` directory. In this case, you need to enable the `srcDir` in the [`lithia.config.js`](/docs/api-reference/configuration) file.
 
-::code-block
----
-icon: lucide:folder-open
----
+::code-block{title="lucide:folder-open"}
+
 #context
 my-lithia-app
 
 #code
+
 ```bash
 routes/
 └── index.ts
 
 ```
+
 ::
 
 Finally, paste the following code into the `index.ts` file:
 
-::code-block
----
-icon: vscode-icons:file-type-typescript
----
+::code-block{icon="logos:typescript-icon"}
+
 #context
 routes/index.ts
 
 #code
-```ts [index.ts]
+
+```typescript
 import { LithiaRequest, LithiaResponse } from 'lithia/types';
 
 export default async function handle(req: LithiaRequest, res: LithiaResponse) {
   res.send('Hello, from Lithia! 🚀');
 }
 ```
+
 ::
 
 ::divider
 ::
 
-## Run the development server
+### Set up the typescript configuration
+
+First, you need to install the TypeScript package:
+
+::code-block
+#context
+Terminal
+
+#code
+
+```bash
+npm install --save-dev typescript
+```
+
+::
+
+Then, create a `tsconfig.json` file in the root of your project and paste the following code:
+
+::code-block{icon="vscode-icons:file-type-json"}
+#context
+tsconfig.json
+
+#code
+
+```json
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowJs": false,
+    "types": ["node"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": []
+}
+```
+
+::
+
+::divider
+::
+
+### Run the development server
 
 1. Run `npm run dev` to start the development server.
 2. Make a request with any HTTP method to `http://localhost:3000`.
 3. Edit the `routes/index.ts` file and see the changes in real-time.
+
+::divider
+::
+
+### Set up `lithia.config.js`
+
+The [`lithia.config.js`](/docs/api-reference/configuration) is not required, but it allows you to customize how Lithia.js behaves. Create a new file named `lithia.config.js` in the root of your project and paste the following code:
+
+::code-block{icon="logos:javascript"}
+#context
+lithia.config.js
+
+#code
+
+```javascript
+import { defineLithiaConfig } from 'lithia/config';
+
+export default defineLithiaConfig({});
+```
+
+::

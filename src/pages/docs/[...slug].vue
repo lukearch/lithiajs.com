@@ -6,28 +6,32 @@
     <UDivider />
     <div class="flex justify-between py-12">
       <div v-if="page.previous">
-        <NuxtLink :to="page.previous.path" class="relative flex items-center">
+        <NuxtLink
+          :to="page.previous.path"
+          class="relative flex items-center navigation-button">
           <div class="flex flex-col ml-6 items-end">
-            <span class="text-xs text-gray-400">Previous</span>
-            <span>{{ page.previous.title }} </span>
+            <span class="text-gray-400">Previous</span>
+            <span class="font-bold text-xl">{{ page.previous.title }} </span>
           </div>
           <Icon
-            name="simple-line-icons:arrow-left"
-            class="absolute left-0 bottom-1"
-            size="16" />
+            name="heroicons-solid:chevron-left"
+            class="absolute left-0 bottom-0 text-gray-400"
+            size="24" />
         </NuxtLink>
       </div>
       <div />
       <div v-if="page.next" class="flex">
-        <NuxtLink :to="page.next.path" class="relative flex items-center">
+        <NuxtLink
+          :to="page.next.path"
+          class="relative flex items-center navigation-button">
           <div class="flex flex-col mr-6">
-            <span class="text-xs text-gray-400">Next</span>
-            <span>{{ page.next.title }} </span>
+            <span class="text-gray-400">Next</span>
+            <span class="font-bold text-xl">{{ page.next.title }} </span>
           </div>
           <Icon
-            name="simple-line-icons:arrow-right"
-            class="absolute right-0 bottom-1"
-            size="16" />
+            name="heroicons-solid:chevron-right"
+            class="absolute right-0 bottom-0 text-gray-400"
+            size="24" />
         </NuxtLink>
       </div>
     </div>
@@ -65,10 +69,15 @@ useSeoMeta({
 </script>
 
 <style scoped>
-h1 {
-  font-size: theme('fontSize.5xl');
-  font-weight: 700;
-  letter-spacing: theme('letterSpacing.tighter');
-  margin-bottom: theme('margin.4');
+.navigation-button span {
+  transition: color 0.3s;
+}
+
+.navigation-button:hover span {
+  color: theme('colors.spring-green.400');
+}
+
+.navigation-button:hover div span:last-child {
+  color: theme('colors.white');
 }
 </style>

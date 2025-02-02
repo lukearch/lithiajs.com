@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border border-solid border-white/10 rounded-md my-8 overflow-hidden">
+    class="border border-solid border-white/10 rounded-md my-6 overflow-hidden">
     <div
       class="px-4 py-2 border-b border-solid border-white/10 flex items-center gap-2">
       <Icon :class="$props.iconColor" :name="icon" size="16" />
