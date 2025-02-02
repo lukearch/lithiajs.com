@@ -128,7 +128,7 @@ routes/
 
 Finally, paste the following code into the `index.ts` file:
 
-::code-block{icon="logos:typescript-icon"}
+::code-block{icon="vscode-icons:file-type-typescript"}
 #context
 routes/index.ts
 
@@ -143,3 +143,12 @@ export default async function handle(req: LithiaRequest, res: LithiaResponse) {
 ```
 
 ::
+
+::divider
+::
+
+## Run the development server
+
+- Run `npm run dev` to start the development server.
+- Make a request with any HTTP method to `http://localhost:3000`.
+- Edit the `routes/index.ts` file and see the changes in real-time.
