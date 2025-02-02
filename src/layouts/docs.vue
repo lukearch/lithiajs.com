@@ -2,7 +2,7 @@
   <main>
     <div
       id="mobile-docs-navigation"
-      class="container lg:hidden border-b border-solid border-white/10 p-4 sticky top-[77px] z-20 backdrop-blur-sm bg-black/50"
+      class="container lg:hidden border-b border-solid border-white/10 p-4 sticky top-[77px] z-20 bg-bunker-950"
       @click="isOpen = !isOpen">
       <span class="flex items-center font-bold">
         <UIcon

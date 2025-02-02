@@ -1,6 +1,6 @@
 <template>
   <HeaderBanner />
-  <header class="backdrop-blur-sm bg-black/50">
+  <header class="bg-bunker-950">
     <div class="container">
       <NuxtLink href="/">
         <NuxtImg src="lithia.svg" :width="34.63" :height="44" alt="Lithia.js" />
