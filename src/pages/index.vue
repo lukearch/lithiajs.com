@@ -12,32 +12,23 @@
           for <strong>Node.js</strong> and
           <strong>TS</strong>
         </h1>
-        <p class="intro-description max-w-[700px] mx-auto text-gray-300">
+        <p class="intro-description max-w-[700px] mx-auto text-gray-100">
           Lithia is an open-source framework that enables you to create
           <strong>elastic</strong>, <strong>modern</strong>, and
           <strong>powerful</strong>
           server-side applications with Node.js and TypeScript.
         </p>
-        <div class="flex gap-4">
+        <div class="flex gap-4 flex-col md:flex-row">
           <CtaButton>
             Get Started
             <Icon name="akar-icons:arrow-right" size="16" />
           </CtaButton>
-          <AnimatedButton font-family="Geist Mono, monospace" @click="copy">
+          <AnimatedButton
+            v-if="width >= 1024"
+            font-family="Geist Mono, monospace"
+            @click="copy">
             {{ scaffoldCommand }}
           </AnimatedButton>
-          <!-- <button
-            class="rounded-button p-button font-button text-button bg-bunker-950/50 border border-solid border-spring-green-400 border-opacity-20 hover:border-opacity-50 flex items-center transition-colors duration-300"
-            @click="copy">
-            <Icon name="lucide:terminal" size="16" />
-            <span
-              class="ml-2"
-              :style="{
-                fontFamily: 'Geist Mono, monospace',
-              }"
-              >{{ scaffoldCommand }}</span
-            >
-          </button> -->
         </div>
       </div>
     </div>
@@ -45,6 +36,7 @@
 </template>
 
 <script lang="ts" setup>
+const { width } = useWindowSize();
 const toast = useToast();
 const scaffoldCommand = 'npx create-lithia-app@latest';
 
@@ -80,5 +72,15 @@ strong {
   line-height: 1.5;
   text-align: center;
   transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 640px) {
+  .intro-title {
+    font-size: theme('fontSize.4xl');
+  }
+
+  .intro-description {
+    font-size: theme('fontSize.lg');
+  }
 }
 </style>
