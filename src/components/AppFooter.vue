@@ -15,7 +15,11 @@
               :href="item.url"
               :target="item.url.startsWith('http') ? '_blank' : '_self'"
               class="menu-item">
-              <Icon v-if="item.icon" :name="item.icon" size="20px" />
+              <Icon
+                v-if="item.icon"
+                :name="item.icon"
+                size="20px"
+                class="hidden md:inline" />
               {{ item.title }}
             </NuxtLink>
           </div>
