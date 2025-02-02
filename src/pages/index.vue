@@ -29,6 +29,7 @@
           v-if="width >= 1024"
           font-family="Geist Mono, monospace"
           @click="copy">
+          <Icon name="lucide:terminal" size="16" class="mr-2" />
           {{ scaffoldCommand }}
         </AnimatedButton>
       </div>

@@ -59,6 +59,17 @@ export default defineNuxtConfig({
         url: 'https://github.com/lukearch/lithiajs.com',
       },
     },
+    watch: {
+      enabled: true,
+    },
+    build: {
+      markdown: {
+        highlight: {
+          langs: ['typescript', 'bash', 'javascript', 'json'],
+          theme: 'catppuccin-mocha',
+        },
+      },
+    },
   },
   vite: {
     server: {

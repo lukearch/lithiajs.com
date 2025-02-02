@@ -49,6 +49,19 @@ const { data: page } = await useAsyncData(route.path, () => {
 definePageMeta({
   layout: 'docs',
 });
+
+useSeoMeta({
+  title: page?.value?.seo.title,
+  description: page?.value?.seo.description,
+  ogTitle: page?.value?.seo.title,
+  ogDescription: page?.value?.seo.description,
+  ogImage: '/images/og.png',
+  ogUrl: `https://lithiajs.com${route.path}`,
+  twitterTitle: page?.value?.seo.title,
+  twitterDescription: page?.value?.seo.description,
+  twitterImage: '/images/og.png',
+  twitterCard: 'summary_large_image',
+});
 </script>
 
 <style scoped>

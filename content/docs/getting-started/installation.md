@@ -1,49 +1,145 @@
 ---
 title: Installation - Get Started with Lithia
 path: /docs/getting-started/installation
-previous:
-  title: Introduction
-  path: /docs/getting-started/introduction
 seo:
   title: Installation - Get Started with Lithia
   description: How to set up a new Lithia.js project
-description: ""
+previous:
+  title: Introduction
+  path: /docs/getting-started/introduction
 next:
   title: Project Structure
   path: /docs/getting-started/project-structure
 ---
 
-# [Installation]{.text-5xl.font-bold.tracking-tighter}
+# Installation
 
-:br
+In this guide, we will walk you through setting up a new Lithia.js project.
 
-:br
-
-## [System requirements]{.text-3xl.font-bold.tracking-tighter}
-
-:br
-
-::prose-p{.text-gray-200}
-- [Node.js 20](https://nodejs.org/){.text-spring-green-400} or later
-- macOS, Windows, and Linux are supported.
+::divider
 ::
 
-:br
+## System Requirements
 
-:br
+- [Node.js v20.x](https://nodejs.org){:target="\_blank"} or later.
+- macOS, Windows, or any Linux distribution.
 
-## [Project Scaffolding]{.text-3xl.font-bold.tracking-tighter}
-
-:br
-
-::prose-p{.text-gray-200}
-We recommend starting a new Lithia.js app using [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app){.text-spring-green-400}, which sets up everything automatically for you. To create a project, run:
+::divider
 ::
 
-::prose-pre{}
-```js [file.js]{2} meta-info=val
-  export default () => {
-    console.log('Code block')
-  }
+## Automatic Installation
+
+We recommend starting a new Lithia.js app using [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app), which
+sets up a new project with a single command:
+
+::code-block
+#context
+Terminal
+
+#code
+
+```bash
+npx create-lithia-app@latest
 ```
+
+::
+
+On installation, you will be prompted to enter the project name and select the template you want to use.
+Some other options are also available, such as choosing a package manager and setting up a Git repository.
+
+:br
+
+After the prompts, [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app) will create a folder with your project name and install
+the required dependencies, and this process may take a few minutes.
+
+::divider
+::
+
+## Manual Installation
+
+At first, you need to know that this is not the recommended way to start a new Lithia.js project.
+However, if you want to install Lithia manually, you can do so by running the following command:
+
+::code-block
+#context
+Terminal
+
+#code
+
+```bash
+npm install --save lithia
+```
+
+::
+
+Open your `package.json` file and add the following scripts:
+
+::code-block
+#context
+package.json
+
+#code
+
+```json
+{
+  "scripts": {
+    "dev": "lithia dev",
+    "start": "lithia start",
+    "build": "lithia build"
+  }
+}
+```
+
+::
+
+These scripts refer to the different stages of developing an application:
+
+- `dev`: runs [`lithia dev`](/docs/api-reference/cli/dev) to start Lithia.js in development mode.
+- `start`: runs [`lithia start`](/docs/api-reference/cli/start) to start Lithia.js in production mode.
+- `build`: runs [`lithia build`](/docs/api-reference/cli/build) to build the application for production.
+
+:br
+:br
+
+### Create the `routes` directory
+
+Lithia.js uses file-system routing, which means that the routes in your applications are determined by how you
+structure your files.
+
+:br
+
+Create a `routes` directory in the root of your project and add a new file named `index.ts`.
+You can also optionally create the `routes` directory inside the `src` directory. In this case, you need to
+enable the `srcDir` in the [`lithia.config.js`](/docs/api-reference/configuration) file.
+
+::code-block{icon="lucide:folder-open"}
+#context
+my-lithia-app
+
+#code
+
+```bash
+routes/
+└── index.ts
+
+```
+
+::
+
+Finally, paste the following code into the `index.ts` file:
+
+::code-block{icon="logos:typescript-icon"}
+#context
+routes/index.ts
+
+#code
+
+```typescript
+import { LithiaRequest, LithiaResponse } from 'lithia/types';
+
+export default async function handle(req: LithiaRequest, res: LithiaResponse) {
+  res.send('Hello, from Lithia! 🚀');
+}
+```
+
 ::

@@ -8,6 +8,10 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         path: z.string(),
+        seo: z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
         previous: z.optional(
           z.object({
             title: z.string(),
