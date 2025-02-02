@@ -1,3 +1,8 @@
-# Foo
+---
+title: Installation
+path: /docs/getting-started/installation
 
-Installation
+previous:
+  title: Introduction
+  path: /docs/getting-started/introduction
+---
