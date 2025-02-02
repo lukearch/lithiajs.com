@@ -19,7 +19,6 @@ const menu = ref<DocsNavigationMenu>([
     items: [
       {
         label: 'Getting Started',
-        href: '/docs/getting-started',
         items: [
           {
             label: 'Installation',
@@ -43,7 +42,6 @@ const menu = ref<DocsNavigationMenu>([
     items: [
       {
         label: 'CLI',
-        href: '/docs/api-reference/cli',
         items: [
           {
             label: 'create-lithia-app',
@@ -52,6 +50,50 @@ const menu = ref<DocsNavigationMenu>([
           {
             label: 'Lithia CLI',
             to: '/docs/api-reference/cli/lithia-cli',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Community',
+    href: '/docs/community',
+    items: [
+      {
+        label: 'Contributing',
+        items: [
+          {
+            label: 'Bug Reports',
+            to: '/docs/community/contributing/bug-reports',
+          },
+          {
+            label: 'Feature Requests',
+            to: '/docs/community/contributing/feature-requests',
+          },
+          {
+            label: 'Pull Requests',
+            to: '/docs/community/contributing/pull-requests',
+          },
+          {
+            label: 'Code of Conduct',
+            to: '/docs/community/contributing/code-of-conduct',
+          },
+        ],
+      },
+      {
+        label: 'Support',
+        items: [
+          {
+            label: 'Sponsorship',
+            to: '/docs/community/support/sponsorship',
+          },
+          {
+            label: 'Discord',
+            to: '/docs/community/support/discord',
+          },
+          {
+            label: 'GitHub Discussions',
+            to: '/docs/community/support/github-discussions',
           },
         ],
       },

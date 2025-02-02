@@ -3,8 +3,8 @@ seo:
   title: Introduction | Lithia.js
   description: Welcome to Lithia.js documentation!
 next:
-  title: Getting Started
-  path: /docs/getting-started
+  title: Installation
+  path: /docs/getting-started/installation
 ---
 
 # Introduction

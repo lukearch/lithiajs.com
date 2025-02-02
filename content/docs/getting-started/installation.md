@@ -3,8 +3,8 @@ seo:
   title: 'Getting Started: Installation | Lithia.js'
   description: How to set up a new Lithia.js project
 previous:
-  title: Getting Started
-  path: /docs/getting-started
+  title: Introduction
+  path: /docs
 next:
   title: Project Structure
   path: /docs/getting-started/project-structure

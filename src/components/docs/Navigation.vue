@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-1/5 py-12 sticky top-[77px] left-0 h-[calc(100vh-77px)] hidden md:flex md:flex-shrink-0 md:flex-col gap-8">
+    class="w-1/5 py-12 sticky top-[77px] left-0 h-[calc(100vh-77px)] hidden lg:flex lg:flex-shrink-0 lg:flex-col gap-8">
     <div v-for="group in processedMenu" :key="group.href">
       <NuxtLink :to="group.href">
         <button class="w-full text-start px-3 py-2">
@@ -15,11 +15,13 @@
       </NuxtLink>
       <UAccordion v-if="group.items" :items="group.items">
         <template #default="{ item, open }">
-          <UButton variant="ghost" @click="$router.push(item.href)">
+          <UButton variant="ghost">
             <span
               class="font-bold"
               :class="{
-                'text-spring-green-400': route.path.includes(item.href),
+                'text-spring-green-400': item.items?.some((subItem: any) =>
+                  route.path.includes(subItem.to)
+                ),
                 'text-gray-300': !route.path.includes(item.href),
               }">
               {{ item.label }}
@@ -69,7 +71,9 @@ const processedMenu = computed(() => {
     ...group,
     items: group.items?.map((item) => ({
       ...item,
-      defaultOpen: route.path.startsWith(item.href),
+      defaultOpen: item.items?.some((subItem) =>
+        route.path.includes(subItem.to)
+      ),
     })),
   }));
 });

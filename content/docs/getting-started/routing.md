@@ -5,7 +5,7 @@ seo:
 previous:
   title: Project Structure
   path: /docs/getting-started/project-structure
-next: {}
+next: null
 ---
 
 # Routing

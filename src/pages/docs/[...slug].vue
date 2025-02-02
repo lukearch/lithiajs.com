@@ -39,7 +39,11 @@
 
   <div v-else>
     <div class="py-12">
-      <span>Não encontrado</span>
+      <PageWelcome title="404">
+        <template #description>
+          The requested page could not be found.
+        </template>
+      </PageWelcome>
     </div>
   </div>
 </template>
