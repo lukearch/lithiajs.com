@@ -28,7 +28,7 @@
       </USlideover>
     </div>
     <div class="container md:flex md:flex-row relative gap-12">
-      <DocsNavigation class="hidden lg:inline" :menu="menu" />
+      <DocsNavigation class="hidden lg:flex" :menu="menu" />
       <div class="w-full min-w-0 max-w-full">
         <slot />
       </div>
