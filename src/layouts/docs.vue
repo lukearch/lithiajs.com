@@ -1,7 +1,34 @@
 <template>
   <main>
+    <div
+      class="container lg:hidden border-b border-solid border-white/10 p-4"
+      @click="isOpen = !isOpen">
+      <span class="flex items-center font-bold">
+        <UIcon
+          name="i-heroicons-chevron-right-20-solid"
+          class="text-gray-300 w-6 h-6 transform transition-transform duration-200"
+          :class="[isOpen && 'rotate-90 text-spring-green-300']" />
+        Menu
+      </span>
+
+      <USlideover v-model="isOpen">
+        <div class="p-4 flex-1 z-50">
+          <UButton
+            color="gray"
+            variant="solid"
+            size="sm"
+            icon="i-heroicons-x-mark-20-solid"
+            class="flex sm:hidden absolute end-5 top-5 z-10"
+            square
+            padded
+            @click="isOpen = false" />
+
+          <DocsNavigation :menu="menu" />
+        </div>
+      </USlideover>
+    </div>
     <div class="container md:flex md:flex-row relative gap-12">
-      <DocsNavigation :menu="menu" />
+      <DocsNavigation class="hidden lg:inline" :menu="menu" />
       <div class="w-full min-w-0 max-w-full">
         <slot />
       </div>
@@ -11,6 +38,13 @@
 
 <script lang="ts" setup>
 import type { DocsNavigationMenu } from '~/types/docs-navigation-menu';
+
+const isOpen = ref(false);
+const router = useRouter();
+
+const unregister = router.afterEach(() => {
+  isOpen.value = false;
+});
 
 const menu = ref<DocsNavigationMenu>([
   {
@@ -100,4 +134,8 @@ const menu = ref<DocsNavigationMenu>([
     ],
   },
 ]);
+
+onUnmounted(() => {
+  unregister();
+});
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-1/5 py-12 sticky top-[77px] left-0 h-[calc(100vh-77px)] hidden lg:flex lg:flex-shrink-0 lg:flex-col gap-8">
+    class="py-12 left-0 h-[calc(100vh-77px)] flex flex-shrink-0 flex-col gap-8">
     <div v-for="group in processedMenu" :key="group.href">
       <NuxtLink :to="group.href">
         <button class="w-full text-start px-3 py-2">

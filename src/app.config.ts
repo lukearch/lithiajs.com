@@ -16,6 +16,7 @@ export default defineAppConfig({
       },
       variant: {
         ghost: 'bg-transparent hover:bg-gray-950/10 hover:dark:bg-gray-400/10',
+        solid: 'focus:ring-0 dark:focus:ring-0',
       },
     },
     card: {
@@ -49,6 +50,10 @@ export default defineAppConfig({
       overlay: {
         background: 'bg-gray-950/10 dark:bg-gray-950/60',
       },
+    },
+    slideover: {
+      wrapper: 'fixed inset-0 flex z-[9999]',
+      background: 'dark:bg-bunker-950',
     },
   },
 });
