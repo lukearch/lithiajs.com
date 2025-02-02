@@ -35,6 +35,38 @@ Trust us, you'll love it!
 ::divider
 ::
 
+## Why Lithia.js?
+
+Lithia.js was created to make the development process easier and faster, without all the boilerplate code and configurations that you usually need to set up when building a Node.js application.
+
+:br
+
+When you choose any other framework, you need to install a lot of dependencies, configure your project, and set up a lot of things before you can start building your application. With Lithia.js, you can start building your application right away, without worrying about all these things.
+
+:br
+
+It's literally as simple as running `create-lithia-app --yes` and then `npm run dev` without any additional configurations.
+All ready, all set!
+
+:br
+
+Lithia.js takes care of all the heavy lifting for you, so you can focus on what really matters.
+
+:br
+
+- We simplify **routing** so you don't have to **manage it**.
+- We provide a **built-in bundler** so you don't have to **configure it**.
+- We provide a **built-in OpenAPI module** so you don't have to **doc by yourself**.
+- We already **documented everything** so you don't have to **figure it out**.
+- We already **configure your project** so you don't have to **waste your time** doing it.
+
+:br
+
+We almost do everything for you, so the correct question should be: **Why not Lithia.js?**
+
+::divider
+::
+
 ## Main features
 
 Some of the main features of Lithia.js are:
