@@ -3,6 +3,7 @@
     <div
       class="h-screen w-full container flex items-center justify-center relative">
       <NuxtImg
+        draggable="false"
         src="neon-leafs.svg"
         class="absolute h-[calc(100%-78px)] opacity-35" />
       <div class="relative z-[5] flex flex-col items-center w-full gap-8">
