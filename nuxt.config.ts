@@ -44,12 +44,15 @@ export default defineNuxtConfig({
   icon: {
     provider: 'iconify',
   },
-  // studio: {
-  //   enabled: true,
-  //   gitInfo: {
-  //     name: 'lithiajs',
-  //     owner: 'lukearch',
-  //     url: 'https://github.com/lukearch/lithiajs',
-  //   },
-  // },
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+      dev: true,
+      gitInfo: {
+        name: 'lithiajs',
+        owner: 'lukearch',
+        url: 'https://github.com/lukearch/lithiajs',
+      },
+    },
+  },
 });

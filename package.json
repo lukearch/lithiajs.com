@@ -30,7 +30,6 @@
   "devDependencies": {
     "@iconify-json/heroicons-solid": "^1.2.1",
     "@iconify-json/lucide": "^1.2.25",
-    "@iconify-json/octicon": "^1.2.2",
-    "@nuxthq/studio": "^2.2.1"
+    "@iconify-json/octicon": "^1.2.2"
   }
 }
