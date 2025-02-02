@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  srcDir: 'src/',
   css: ['~/assets/css/main.css'],
   ssr: true,
   modules: [
@@ -45,15 +44,12 @@ export default defineNuxtConfig({
   icon: {
     provider: 'iconify',
   },
-  content: {
-    preview: {
-      api: 'https://api.nuxt.studio',
-      gitInfo: {
-        name: 'lithiajs.com',
-        owner: 'lukearch',
-        url: 'https://github.com/lukearch/lithiajs.com',
-      },
-      dev: true,
+  studio: {
+    enabled: true,
+    gitInfo: {
+      name: 'lithiajs',
+      owner: 'lukearch',
+      url: 'https://github.com/lukearch/lithiajs',
     },
   },
 });
