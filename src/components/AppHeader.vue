@@ -16,9 +16,6 @@
             {{ minifyNumber(data.stargazers_count) }}
           </span>
         </NuxtLink>
-        <NuxtLink href="https://opencollective.com/lithiajs" target="_blank">
-          <AnimatedButton always-animate> Become a Sponsor </AnimatedButton>
-        </NuxtLink>
       </div>
     </div>
   </header>

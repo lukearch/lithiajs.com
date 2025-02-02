@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button :class="{ 'w-full': props.wFull, 'w-fit': !props.wFull }">
     <span
       :style="{
         fontFamily: props.fontFamily,
@@ -14,6 +14,7 @@
 const props = defineProps<{
   fontFamily?: string;
   uppercase?: boolean;
+  wFull?: boolean;
 }>();
 </script>
 
@@ -22,7 +23,6 @@ button {
   position: relative;
   border-radius: theme('borderRadius.button');
   padding: theme('padding.button');
-  width: fit-content;
   overflow: hidden;
   cursor: pointer;
   background-color: transparent;
@@ -76,5 +76,6 @@ button span {
   color: theme('colors.bunker.950');
   font-weight: theme('fontWeight.button');
   font-size: theme('fontSize.button');
+  justify-content: center;
 }
 </style>

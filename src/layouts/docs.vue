@@ -30,10 +30,33 @@
     </div>
     <div class="container md:flex md:flex-row relative gap-12">
       <DocsNavigation
-        class="hidden lg:flex sticky top-[77px] w-1/5"
+        class="hidden lg:flex sticky top-[77px] min-w-[250px]"
         :menu="menu" />
       <div class="w-full min-w-0 max-w-full">
         <slot />
+      </div>
+      <div
+        class="h-[calc(100vh-77px)] sticky top-[77px] py-12 min-w-[180px] hidden lg:flex flex-col">
+        <NuxtLink
+          href="https://opencollective.com/lithiajs"
+          target="_blank"
+          class="flex">
+          <CtaButton w-full> Become a Sponsor </CtaButton>
+        </NuxtLink>
+        <div class="grid grid-cols-6 gap-2 mt-4">
+          <NuxtLink
+            href="https://github.com/lithiajs/lithia"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors duration-300">
+            <UIcon name="simple-icons:github" size="16" />
+          </NuxtLink>
+          <NuxtLink
+            href="https://x.com/lithiajs"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors duration-300">
+            <UIcon name="simple-icons:x" size="16" />
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </main>

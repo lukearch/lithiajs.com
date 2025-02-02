@@ -1,5 +1,9 @@
 <template>
-  <button :class="{ 'always-animated': props.alwaysAnimate }">
+  <button
+    :style="{
+      width: props.wFull ? '100%' : 'auto',
+    }"
+    :class="{ 'always-animated': props.alwaysAnimate }">
     <span
       :style="{
         fontFamily: props.fontFamily,
@@ -15,6 +19,7 @@ const props = defineProps<{
   alwaysAnimate?: boolean;
   fontFamily?: string;
   uppercase?: boolean;
+  wFull?: boolean;
 }>();
 </script>
 
@@ -38,7 +43,6 @@ button {
   position: relative;
   border-radius: theme('borderRadius.button');
   padding: theme('padding.button');
-  width: fit-content;
   cursor: pointer;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -91,6 +95,7 @@ button span {
   color: white;
   font-weight: theme('fontWeight.button');
   font-size: theme('fontSize.button');
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
