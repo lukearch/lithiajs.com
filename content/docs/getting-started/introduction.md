@@ -1,7 +1,5 @@
 ---
-date: 2020-11-11
+title: Introduction
 ---
 
-# Foo
-
-This is Foo blog post a.
+# Introduction dd
