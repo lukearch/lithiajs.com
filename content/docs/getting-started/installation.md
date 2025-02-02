@@ -29,47 +29,39 @@ In this guide, we will walk you through setting up a new Lithia.js project.
 
 ## Automatic Installation
 
-We recommend starting a new Lithia.js app using [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app), which
-sets up a new project with a single command:
+We recommend starting a new Lithia.js app using [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app), which sets up a new project with a single command:
 
 ::code-block
 #context
 Terminal
 
 #code
-
 ```bash
 npx create-lithia-app@latest
 ```
-
 ::
 
-On installation, you will be prompted to enter the project name and select the template you want to use.
-Some other options are also available, such as choosing a package manager and setting up a Git repository.
+On installation, you will be prompted to enter the project name and select the template you want to use. Some other options are also available, such as choosing a package manager and setting up a Git repository.
 
 :br
 
-After the prompts, [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app) will create a folder with your project name and install
-the required dependencies, and this process may take a few minutes.
+After the prompts, [`create-lithia-app`](/docs/api-reference/cli/create-lithia-app) will create a folder with your project name and install the required dependencies, and this process may take a few minutes.
 
 ::divider
 ::
 
 ## Manual Installation
 
-At first, you need to know that this is not the recommended way to start a new Lithia.js project.
-However, if you want to install Lithia manually, you can do so by running the following command:
+At first, you need to know that this is not the recommended way to start a new Lithia.js project. However, if you want to install Lithia manually, you can do so by running the following command:
 
 ::code-block
 #context
 Terminal
 
 #code
-
 ```bash
 npm install --save lithia
 ```
-
 ::
 
 Open your `package.json` file and add the following scripts:
@@ -79,8 +71,7 @@ Open your `package.json` file and add the following scripts:
 package.json
 
 #code
-
-```json
+```json [package.json]
 {
   "scripts": {
     "dev": "lithia dev",
@@ -89,7 +80,6 @@ package.json
   }
 }
 ```
-
 ::
 
 These scripts refer to the different stages of developing an application:
@@ -99,49 +89,49 @@ These scripts refer to the different stages of developing an application:
 - `build`: runs [`lithia build`](/docs/api-reference/cli/build) to build the application for production.
 
 :br
+
 :br
 
 ### Create the `routes` directory
 
-Lithia.js uses file-system routing, which means that the routes in your applications are determined by how you
-structure your files.
+Lithia.js uses file-system routing, which means that the routes in your applications are determined by how you structure your files.
 
 :br
 
-Create a `routes` directory in the root of your project and add a new file named `index.ts`.
-You can also optionally create the `routes` directory inside the `src` directory. In this case, you need to
-enable the `srcDir` in the [`lithia.config.js`](/docs/api-reference/configuration) file.
+Create a `routes` directory in the root of your project and add a new file named `index.ts`. You can also optionally create the `routes` directory inside the `src` directory. In this case, you need to enable the `srcDir` in the [`lithia.config.js`](/docs/api-reference/configuration) file.
 
-::code-block{icon="lucide:folder-open"}
+::code-block
+---
+icon: lucide:folder-open
+---
 #context
 my-lithia-app
 
 #code
-
 ```bash
 routes/
 └── index.ts
 
 ```
-
 ::
 
 Finally, paste the following code into the `index.ts` file:
 
-::code-block{icon="vscode-icons:file-type-typescript"}
+::code-block
+---
+icon: vscode-icons:file-type-typescript
+---
 #context
 routes/index.ts
 
 #code
-
-```typescript
+```ts [index.ts]
 import { LithiaRequest, LithiaResponse } from 'lithia/types';
 
 export default async function handle(req: LithiaRequest, res: LithiaResponse) {
   res.send('Hello, from Lithia! 🚀');
 }
 ```
-
 ::
 
 ::divider
