@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { GhRepo } from '~~/types/gh-repo';
+import type { GhRepo } from '~/types/gh-repo';
 
 const { y } = useWindowScroll();
 const { data } = await useFetch<GhRepo>(
