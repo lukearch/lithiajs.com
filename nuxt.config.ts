@@ -62,7 +62,8 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      allowedHosts: true,
+      allowedHosts:
+        process.env.NODE_ENV === 'development' ? true : ['lithiajs.com'],
     },
   },
 });
