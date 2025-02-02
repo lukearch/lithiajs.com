@@ -10,8 +10,8 @@
           :to="page.previous.path"
           class="relative flex items-center navigation-button">
           <div class="flex flex-col ml-6 items-end">
-            <span class="text-gray-400">Previous</span>
-            <span class="font-bold text-xl">{{ page.previous.title }} </span>
+            <span class="text-gray-400 text-sm lg:text-base">Previous</span>
+            <span class="font-bold lg:text-xl">{{ page.previous.title }} </span>
           </div>
           <Icon
             name="heroicons-solid:chevron-left"
@@ -25,8 +25,8 @@
           :to="page.next.path"
           class="relative flex items-center navigation-button">
           <div class="flex flex-col mr-6">
-            <span class="text-gray-400">Next</span>
-            <span class="font-bold text-xl">{{ page.next.title }} </span>
+            <span class="text-gray-400 text-sm lg:text-base">Next</span>
+            <span class="font-bold lg:text-xl">{{ page.next.title }} </span>
           </div>
           <Icon
             name="heroicons-solid:chevron-right"

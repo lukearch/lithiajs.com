@@ -1,5 +1,7 @@
 <template>
-  <h1 :id="props.id" class="text-5xl font-bold tracking-tighter mb-12">
+  <h1
+    :id="props.id"
+    class="text-3xl sm:text-5xl font-bold tracking-tighter mb-12">
     <a v-if="generate" :href="`#${props.id}`">
       <slot />
     </a>
