@@ -2,9 +2,11 @@
   <Analytics />
   <SpeedInsights />
   <NuxtRouteAnnouncer />
+  <AppHeader />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <AppFooter />
   <UNotifications />
 </template>
 

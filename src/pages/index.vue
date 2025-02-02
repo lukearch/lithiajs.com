@@ -1,39 +1,37 @@
 <template>
-  <main>
-    <div
-      class="h-screen w-full container flex items-center justify-center relative">
-      <NuxtImg
-        draggable="false"
-        src="neon-leafs.svg"
-        class="absolute h-[calc(100%-78px)] opacity-35" />
-      <div class="relative z-[5] flex flex-col items-center w-full gap-8">
-        <h1 class="intro-title">
-          The <strong>Next-Gen</strong> Framework
-          <br />
-          for <strong>Node.js</strong> and
-          <strong>TS</strong>
-        </h1>
-        <p class="intro-description max-w-[700px] mx-auto text-gray-100">
-          Lithia is an open-source framework that enables you to create
-          <strong>elastic</strong>, <strong>modern</strong>, and
-          <strong>powerful</strong>
-          server-side applications with Node.js and TypeScript.
-        </p>
-        <div class="flex gap-4 flex-col md:flex-row">
-          <CtaButton>
-            Get Started
-            <Icon name="akar-icons:arrow-right" size="16" />
-          </CtaButton>
-          <AnimatedButton
-            v-if="width >= 1024"
-            font-family="Geist Mono, monospace"
-            @click="copy">
-            {{ scaffoldCommand }}
-          </AnimatedButton>
-        </div>
+  <div
+    class="h-screen w-full container flex items-center justify-center relative">
+    <NuxtImg
+      draggable="false"
+      src="neon-leafs.svg"
+      class="absolute h-[calc(100%-78px)] opacity-35" />
+    <div class="relative z-[5] flex flex-col items-center w-full gap-8">
+      <h1 class="intro-title">
+        The <strong>Next-Gen</strong> Framework
+        <br />
+        for <strong>Node.js</strong> and
+        <strong>TS</strong>
+      </h1>
+      <p class="intro-description max-w-[700px] mx-auto text-gray-100">
+        Lithia is an open-source framework that enables you to create
+        <strong>elastic</strong>, <strong>modern</strong>, and
+        <strong>powerful</strong>
+        server-side applications with Node.js and TypeScript.
+      </p>
+      <div class="flex gap-4 flex-col md:flex-row">
+        <CtaButton>
+          Get Started
+          <Icon name="akar-icons:arrow-right" size="16" />
+        </CtaButton>
+        <AnimatedButton
+          v-if="width >= 1024"
+          font-family="Geist Mono, monospace"
+          @click="copy">
+          {{ scaffoldCommand }}
+        </AnimatedButton>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script lang="ts" setup>

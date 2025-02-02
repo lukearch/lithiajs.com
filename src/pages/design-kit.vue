@@ -1,5 +1,5 @@
 <template>
-  <main class="py-12">
+  <div class="py-12">
     <PageWelcome title="Design Kit" class="mb-12">
       <template #description>
         The Lithia.js design kit contains all the resources you need to create
@@ -110,7 +110,7 @@
           }" />
       </div>
     </DesignKitSection>
-  </main>
+  </div>
 </template>
 
 <script lang="ts" setup></script>
