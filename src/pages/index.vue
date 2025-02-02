@@ -4,7 +4,7 @@
     <NuxtImg
       draggable="false"
       src="neon-leafs.svg"
-      class="absolute h-[calc(100%-78px)] opacity-35" />
+      class="absolute h-[calc(100%-77px)] opacity-35" />
     <div class="relative z-[5] flex flex-col items-center w-full gap-8">
       <h1 class="intro-title">
         The <strong>Next-Gen</strong> Framework

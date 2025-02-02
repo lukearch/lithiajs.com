@@ -11,6 +11,9 @@ export default defineAppConfig({
         size: 'sm',
         variant: 'solid',
       },
+      padding: {
+        sm: 'p-button',
+      },
       variant: {
         ghost: 'bg-transparent hover:bg-gray-950/10 hover:dark:bg-gray-400/10',
       },

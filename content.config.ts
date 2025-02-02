@@ -6,12 +6,6 @@ export default defineContentConfig({
       type: 'page',
       source: 'docs/**/*.md',
       schema: z.object({
-        title: z.string(),
-        path: z.string(),
-        seo: z.object({
-          title: z.string(),
-          description: z.string(),
-        }),
         previous: z.optional(
           z.object({
             title: z.string(),
@@ -24,6 +18,10 @@ export default defineContentConfig({
             path: z.string(),
           })
         ),
+        seo: z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
       }),
     }),
   },
