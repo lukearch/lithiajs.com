@@ -49,7 +49,7 @@ header {
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   transition: all 0.3s ease-out;
 }
 

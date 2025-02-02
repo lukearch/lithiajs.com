@@ -3,7 +3,7 @@
     <PageTitle>{{ title }}</PageTitle>
     <p
       v-if="$slots.description"
-      class="text-gray-200 text-lg leading-8 max-w-xl">
+      class="text-gray-200 text-lg leading-8 max-w-xl mt-8">
       <slot name="description" />
     </p>
   </div>
