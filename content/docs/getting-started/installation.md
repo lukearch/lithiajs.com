@@ -1,6 +1,6 @@
 ---
 seo:
-  title: Installation - Get Started with Lithia
+  title: 'Getting Started: Installation | Lithia.js'
   description: How to set up a new Lithia.js project
 previous:
   title: Getting Started

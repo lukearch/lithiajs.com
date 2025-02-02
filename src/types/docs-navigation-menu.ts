@@ -5,7 +5,6 @@ export type DocsNavigationNavigationItem = {
 
 export type DocsNavigationAccordion = {
   label: string;
-  icon: string;
   href: string;
   defaultOpen?: boolean;
   items?: DocsNavigationNavigationItem[];
