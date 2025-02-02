@@ -53,6 +53,7 @@ export default defineNuxtConfig({
         owner: 'lukearch',
         url: 'https://github.com/lukearch/lithiajs.com',
       },
+      dev: true,
     },
   },
 });

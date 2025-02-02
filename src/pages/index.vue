@@ -19,10 +19,12 @@
         server-side applications with Node.js and TypeScript.
       </p>
       <div class="flex gap-4 flex-col md:flex-row">
-        <CtaButton>
-          Get Started
-          <Icon name="akar-icons:arrow-right" size="16" />
-        </CtaButton>
+        <NuxtLink to="/docs">
+          <CtaButton>
+            Get Started
+            <Icon name="akar-icons:arrow-right" size="16" />
+          </CtaButton>
+        </NuxtLink>
         <AnimatedButton
           v-if="width >= 1024"
           font-family="Geist Mono, monospace"
