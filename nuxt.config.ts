@@ -41,6 +41,8 @@ export default defineNuxtConfig({
   site: {
     url: 'https://lithiajs.com',
     name: 'Lithia.js: The Next-Generation Framework for Node.js and TS',
+    indexable: true,
+    enabled: true,
   },
   icon: {
     provider: 'iconify',
