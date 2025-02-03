@@ -123,12 +123,12 @@ const menu = ref<DocsNavigationMenu>([
         label: 'Contributing',
         items: [
           {
-            label: 'Bug Reports',
-            to: '/docs/community/contributing/bug-reports',
-          },
-          {
             label: 'Feature Requests',
             to: '/docs/community/contributing/feature-requests',
+          },
+          {
+            label: 'Bug Reports',
+            to: '/docs/community/contributing/bug-reports',
           },
           {
             label: 'Pull Requests',

@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
+    '@nuxt/scripts',
     '@vueuse/nuxt',
     'nuxt-og-image',
   ],
