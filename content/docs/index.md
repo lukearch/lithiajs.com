@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Introduction | Lithia.js - Next-Generation Node.js Framework
-  description: Discover Lithia.js - A modern Node.js framework engineered for performance and developer efficiency. Start building production-ready applications in minutes.
+  title: 'Lithia.js | Next-Generation Node.js Framework'
+  description: 'Build high-performance Node.js applications faster with zero configuration. Production-ready APIs in minutes.'
 next:
   title: Installation
   path: /docs/getting-started/installation
@@ -9,102 +9,100 @@ next:
 
 # Introduction
 
-Welcome to the Future of Node.js Development
+Redefining Node.js Development Efficiency
 
 ::divider
 ::
 
 ## What is Lithia.js?
 
-Lithia.js is a next-generation framework for building high-performance server-side applications with Node.js. Engineered for modern development workflows, it combines minimalism with powerful capabilities out of the box.
+Lithia.js is a modern Node.js framework focused on developer productivity and application performance. Designed for building scalable server-side applications, it provides enterprise-grade capabilities with minimal setup.
 
 :br
 
-Built entirely on Node.js core modules with zero external dependencies, Lithia.js leverages the native `http` module for unparalleled performance. Our integrated toolchain eliminates configuration overhead through:
+Built entirely with Node.js core modules, Lithia.js delivers exceptional performance while maintaining a lightweight footprint. Key architectural advantages:
 
 :br
 
-- Intelligent code bundling and compilation
-- Automated production optimizations
-- Built-in API documentation generation
-- TypeScript-native development environment
+- Zero external dependencies
+- Native HTTP module optimization
+- File-system based routing
+- Built-in TypeScript toolchain
+- Automatic API documentation
 
 :br
 
-Whether you're prototyping a startup idea or architecting enterprise solutions, Lithia.js streamlines your workflow from first commit to production deployment.
+From prototype to production, Lithia.js eliminates infrastructure complexity so you can focus on business logic.
 
 ::divider
 ::
 
-## Why Choose Lithia.js?
+## Why Lithia.js?
 
-Traditional Node.js frameworks require extensive setup before writing business logic. Lithia.js redefines this paradigm through our zero-configuration philosophy:
-
-:br
-
-### Lithia.js Workflow
-
-- We simplify **routing** so you don't need to **manage it**
-- We optimize **bundling** so you don't need to **configure it**
-- We automate **API documentation** so you don't need to **write it**
-- We streamline **TypeScript support** so you don't need to **set it up**
-- We provide **Dev Mode** for instant feedback without manual reloads
-- We offer **production-ready** builds that are 72x faster than traditional frameworks
-- We ensure **zero dependencies** for a lightweight and secure application stack
-- We deliver **performance-first** architecture with built-in caching strategies
+Where traditional frameworks demand hours of configuration, Lithia.js delivers:
 
 :br
 
-We don't just simplify your development process - **we accelerate it**.
-In an era of complex toolchains, the real question becomes: **Why not choose Lithia.js**?
+**Time-Saving Foundations**
+
+- 30-second project initialization
+- Pre-configured build pipelines
+- Automatic OpenAPI spec generation
+- Runtime optimizations out-of-the-box
+
+**Developer-Centric Workflow**
+
+- Instant hot-reload development
+- Type safety across entire stack
+- Intuitive routing conventions
+- Clean abstraction layers
+
+:br
+
+Stop wrestling with tooling configurations. Start shipping features.
 
 ::divider
 ::
 
 ## Core Capabilities
 
-Explore Lithia.js feature set designed for modern application development:
+Essential tools for modern backend development:
 
 ::card-collection
 
 ::feature-card
 #title
-Smart Routing System
-
+File-System Routing
 #content
-Intuitive file-based routing with dynamic parameter support
+Automatic endpoint creation from directory structure
 ::
 
 ::feature-card
 #title
-Integrated Bundler
-
+Production Bundler
 #content
-Optimized production builds with tree-shaking and minification
+Optimized builds with tree-shaking and minification
 ::
 
 ::feature-card
 #title
-API Documentation
-
+Live Documentation
 #content
-Automatically generated OpenAPI documentation for your endpoints
+Auto-generated OpenAPI specs with real-time updates
 ::
 
 ::feature-card
 #title
-Dev Mode
-
+TypeScript Native
 #content
-Instantly preview changes with hot module replacement
+Strict type checking from day one
 ::
 
 ::feature-card
 #title
-TypeScript First
-
+Dev Server
 #content
-Native ESM support with zero-config TS compilation
+Instant refresh with error overlay
 ::
 
 ::
@@ -112,7 +110,7 @@ Native ESM support with zero-config TS compilation
 ::divider
 ::
 
-Ready to experience the future of Node.js development? Let's get started with the installation process.
+Start your next project with unprecedented speed:
 
 ::code-block
 #context

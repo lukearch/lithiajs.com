@@ -1,7 +1,7 @@
 ---
 seo:
-  title: 'Getting Started: Project Structure | Lithia.js'
-  description: Get started with Lithia.js by creating a new project, installing dependencies, and running your first Lithia.js app.
+  title: 'Lithia.js Project Architecture | Next-Gen Structure Guide'
+  description: 'Master Lithia.js project organization with optimized conventions for enterprise-grade applications'
 previous:
   title: Installation
   path: /docs/getting-started/installation
@@ -12,95 +12,88 @@ next:
 
 # Project Structure
 
-In this guide, we will learn about the folder and file conventions in Lithia.js, as well as tips on how to organize your project.
+Optimized Architecture for Modern Node.js Applications
 
 ::divider
 ::
 
-## Folder and file conventions
+## Core Directory Conventions
 
-### Top-level folders
+### Essential Directories
 
-Top-level folders are used to organize your application's code and detect the purpose of each file.
+![Project Architecture](/images/docs/getting-started/project-structure/1.svg){width=985, height=270}
 
-![Top-level folders](/images/docs/getting-started/project-structure/1.svg){width=985, height=270}
-
-| Folder     | Description                     |
-| ---------- | ------------------------------- |
-| [`src`]    | Optional project source folder. |
-| [`routes`] | Route handlers.                 |
-
-:br
-:br
-
-### Top-level files
-
-Top-level files are used to configure your application, manage dependencies, integrate with other tools, and more.
+| Directory | Purpose                         | Implementation Notes                |
+| --------- | ------------------------------- | ----------------------------------- |
+| `src`     | Business logic & domain modules | Optional TypeScript/JS organization |
+| `routes`  | API endpoint definitions        | Zero-config routing system          |
 
 :br
 
-| File                 | Description                        |
-| -------------------- | ---------------------------------- |
-| [`lithia.config.js`] | Lithia.js configuration file.      |
-| [`package.json`]     | Node.js package file.              |
-| [`.env`]             | Environment variables file.        |
-| [`.env.local`]       | Local environment variables.       |
-| [`.env.production`]  | Production environment variables.  |
-| [`.env.development`] | Development environment variables. |
-| `.gitignore`         | Git ignore file.                   |
-| `tsconfig.json`      | TypeScript configuration file.     |
+### Configuration Ecosystem
 
-:br
-:br
-
-### Static route handlers
-
-Inside the [`routes`] folder, you can create route handlers to handle requests to specific paths.
+| File               | Role                             |
+| ------------------ | -------------------------------- |
+| `lithia.config.js` | Framework behavior customization |
+| `package.json`     | Dependency management & scripts  |
+| `tsconfig.json`    | TypeScript compilation rules     |
 
 :br
 
-| File         | Path    |
-| ------------ | ------- |
-| [`index.ts`] | `/`     |
-| [`user.ts`]  | `/user` |
+### Environment Management
+
+| File               | Environment Scope       |
+| ------------------ | ----------------------- |
+| `.env`             | Base variables          |
+| `.env.local`       | Developer overrides     |
+| `.env.production`  | Cloud deployment config |
+| `.env.development` | Dev-specific settings   |
+
+::divider
+::
+
+## Routing Architecture
+
+### Core Routing Conventions
+
+| Pattern     | URL Structure | Use Case            |
+| ----------- | ------------- | ------------------- |
+| `index.ts`  | /             | Root endpoint       |
+| `user.ts`   | /user         | Static resource     |
+| `[id].ts`   | /:id          | Dynamic identifiers |
+| `[slug].ts` | /:slug        | SEO-friendly paths  |
 
 :br
 
-### Dynamic route handlers
+### Advanced Routing Patterns
 
-You can also create dynamic route handlers by using the `[]` notation in the file name.
+| Structure               | Example Path          | Implementation Benefit            |
+| ----------------------- | --------------------- | --------------------------------- |
+| `api/v1/users`          | /api/v1/users         | Versioned endpoints               |
+| `products/[id]/reviews` | /products/123/reviews | Nested resources                  |
+| `(admin)/dashboard`     | /dashboard            | Route grouping without URL prefix |
 
-:br
+::divider
+::
 
-| File          | Path     |
-| ------------- | -------- |
-| [`[id].ts`]   | `/:id`   |
-| [`[slug].ts`] | `/:slug` |
+## Best Practices
 
-:br
+### Code Organization Strategy
 
-### Nested folders
-
-You can create nested folders inside the [`routes`] folder to organize your route handlers.
-
-:br
-
-| Folder          | Description                  |
-| --------------- | ---------------------------- |
-| `folder`        | Static Route segment         |
-| `folder/folder` | Static Nested route segment  |
-| `[id]`          | Dynamic Route segment        |
-| `[id]/folder`   | Dynamic Nested route segment |
+1. Keep route handlers focused on HTTP layer
+2. Store business logic in `src/modules`
+3. Maintain shared types in `src/types`
+4. Place middleware in `src/middlewares`
 
 :br
 
-### Route Groups
+### Scalability Patterns
 
-You can create route groups without affecting the route path.
+- Use route groups for permission-based endpoints
+- Implement dynamic segments for CRUD operations
+- Leverage nested folders for complex API structures
 
-:br
+::divider
+::
 
-| Folder        | Description |
-| ------------- | ----------- |
-| `(admin)`     | Route Group |
-| `(dashboard)` | Route Group |
+Pro Tip: Generate route visualization with ###npx lithia routes analyze### to optimize your API structure.
