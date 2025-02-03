@@ -29,6 +29,7 @@ Built entirely with Node.js core modules, Lithia.js delivers exceptional perform
 - File-system based routing
 - Built-in TypeScript toolchain
 - Automatic API documentation
+- Lithia Studio for real-time monitoring (coming soon)
 
 :br
 
