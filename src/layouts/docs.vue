@@ -115,50 +115,6 @@ const menu = ref<DocsNavigationMenu>([
       },
     ],
   },
-  {
-    label: 'Community',
-    href: '/docs/community',
-    items: [
-      {
-        label: 'Contributing',
-        items: [
-          {
-            label: 'Feature Requests',
-            to: '/docs/community/contributing/feature-requests',
-          },
-          {
-            label: 'Bug Reports',
-            to: '/docs/community/contributing/bug-reports',
-          },
-          {
-            label: 'Pull Requests',
-            to: '/docs/community/contributing/pull-requests',
-          },
-          {
-            label: 'Code of Conduct',
-            to: '/docs/community/contributing/code-of-conduct',
-          },
-        ],
-      },
-      {
-        label: 'Support',
-        items: [
-          {
-            label: 'Sponsorship',
-            to: '/docs/community/support/sponsorship',
-          },
-          {
-            label: 'Discord',
-            to: '/docs/community/support/discord',
-          },
-          {
-            label: 'GitHub Discussions',
-            to: '/docs/community/support/github-discussions',
-          },
-        ],
-      },
-    ],
-  },
 ]);
 
 onUnmounted(() => {
