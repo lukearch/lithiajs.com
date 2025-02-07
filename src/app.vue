@@ -39,8 +39,8 @@ useHead({
   link: [
     {
       rel: 'icon',
-      type: 'image/svg+xml',
-      href: '/lithia.svg',
+      type: 'image/x-icon',
+      href: '/favicon.ico',
     },
   ],
 });
