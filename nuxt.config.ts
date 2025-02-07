@@ -49,6 +49,10 @@ export default defineNuxtConfig({
     provider: 'iconify',
   },
   content: {
+    database: {
+      type: 'postgres',
+      url: process.env.DATABASE_URL!,
+    },
     preview: {
       api: 'https://api.nuxt.studio',
       dev: true,
