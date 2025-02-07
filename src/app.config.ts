@@ -6,7 +6,7 @@ export default defineAppConfig({
       position: 'top-[unset] left-[unset] bottom-0 right-0',
     },
     notification: {
-      background: 'dark:bg-gray-950',
+      background: 'bg-gray-950 dark:bg-gray-950',
     },
     button: {
       base: 'transition-colors duration-200',
